@@ -6,9 +6,7 @@ sc = SparkContext()
 spark = SparkSession.builder.appName('apptest').master('local').getOrCreate()
 spark.sparkContext.setLogLevel("WARN")
 
-
 print("\n\n Inicio!!\n\n")
-
 
 df = spark.range(100)                                    \
 .withColumn('col2', hash(col('id')))                     \
