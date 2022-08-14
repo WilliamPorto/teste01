@@ -2,6 +2,7 @@ from pyspark.sql import SparkSession, HiveContext
 from pyspark.sql.functions import substring
 from pyspark import SparkContext
 
+
 sc = SparkContext()
 HiveContext(sc)
 spark = SparkSession.builder.appName('cca175_will').master('local').getOrCreate()
